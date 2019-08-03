@@ -12,9 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.orechou.pocket.R;
 import org.orechou.pocket.models.entity.Entry;
-import org.orechou.pocket.views.DeadlineActivity;
+import org.orechou.pocket.views.deadline.DeadlineActivity;
 import org.orechou.pocket.views.clipboard.ClipboardActivity;
 import org.orechou.pocket.views.code.CodeActivity;
+import org.orechou.pocket.views.habit.HabitActivity;
 
 import java.util.List;
 
@@ -45,6 +46,9 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.ViewHolder> 
         holder.itemView.setOnClickListener((View v) -> {
             Entry entry = mEntryList.get(holder.getAdapterPosition());
             switch (entry.getName()) {
+                case "每日习惯":
+                    HabitActivity.startActivity(mContext);
+                    break;
                 case "倒数日":
                     DeadlineActivity.startActivity(mContext);
                     break;

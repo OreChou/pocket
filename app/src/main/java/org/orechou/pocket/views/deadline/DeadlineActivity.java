@@ -1,4 +1,4 @@
-package org.orechou.pocket.views;
+package org.orechou.pocket.views.deadline;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import org.litepal.LitePal;
 import org.orechou.pocket.R;
 import org.orechou.pocket.models.entity.Deadline;
+import org.orechou.pocket.views.BaseActivity;
 
 import java.util.List;
 

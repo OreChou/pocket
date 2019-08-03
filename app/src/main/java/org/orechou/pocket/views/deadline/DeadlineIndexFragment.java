@@ -1,4 +1,4 @@
-package org.orechou.pocket.views;
+package org.orechou.pocket.views.deadline;
 
 import android.os.Bundle;
 

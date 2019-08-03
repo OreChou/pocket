@@ -1,8 +1,6 @@
 package org.orechou.pocket.models.adapters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -18,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.orechou.pocket.R;
 import org.orechou.pocket.models.entity.Deadline;
 import org.orechou.pocket.utils.DateUtils;
-import org.orechou.pocket.views.DeadlineActivity;
+import org.orechou.pocket.views.deadline.DeadlineActivity;
 
 import java.util.List;
 
