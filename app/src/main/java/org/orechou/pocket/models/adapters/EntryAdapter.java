@@ -39,7 +39,7 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.ViewHolder> 
         if (mContext == null) {
             mContext = parent.getContext();
         }
-        View view = LayoutInflater.from(mContext).inflate(R.layout.entry_item, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_entry, parent, false);
 
         final ViewHolder holder = new ViewHolder(view);
 

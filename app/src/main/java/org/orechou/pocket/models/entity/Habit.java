@@ -2,7 +2,9 @@ package org.orechou.pocket.models.entity;
 
 import org.litepal.crud.LitePalSupport;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Habit extends LitePalSupport {
 
@@ -18,6 +20,8 @@ public class Habit extends LitePalSupport {
     private Date firstContinuousDate;
 
     private Integer totalDays;
+
+    private List<HabitTag> habitTags = new ArrayList<>();
 
     public Habit() {}
 
@@ -73,5 +77,13 @@ public class Habit extends LitePalSupport {
 
     public void setTotalDays(Integer totalDays) {
         this.totalDays = totalDays;
+    }
+
+    public List<HabitTag> getHabitTags() {
+        return habitTags;
+    }
+
+    public void setHabitTags(List<HabitTag> habitTags) {
+        this.habitTags = habitTags;
     }
 }

@@ -1,163 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <CheckBox
-        android:layout_margin="10dp"
-        android:id="@+id/checkbox_confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
 
     <LinearLayout
-        android:layout_margin="10dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:id="@+id/text_view_name"
-            android:text="习惯名称"
-            android:layout_width="match_parent"
+        <CheckBox
+            android:layout_margin="10dp"
+            android:id="@+id/checkbox_confirm"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:id="@+id/checkbox_monday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:text="周一"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
-
-            </LinearLayout>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/text_view_name"
+                android:text="习惯名称"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:id="@+id/checkbox_tuesday"
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:text="周二"
+                    <CheckBox
+                        android:id="@+id/checkbox_monday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="周一"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/checkbox_tuesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                    <TextView
+                        android:text="周二"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
 
-                <CheckBox
-                    android:id="@+id/checkbox_wednesday"
+                        android:textSize="@dimen/font_8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:text="周三"
+                    <CheckBox
+                        android:id="@+id/checkbox_wednesday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="周三"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/checkbox_thursday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                    <TextView
+                        android:text="周四"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
 
-                <CheckBox
-                    android:id="@+id/checkbox_thursday"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:text="周四"
+                    <CheckBox
+                        android:id="@+id/checkbox_friday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:text="周五"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
+                    android:layout_height="wrap_content">
 
-            </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/checkbox_saturday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                    <TextView
+                        android:text="周六"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
 
-                <CheckBox
-                    android:id="@+id/checkbox_friday"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:text="周五"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
+                    <CheckBox
+                        android:id="@+id/checkbox_sunday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
-            </LinearLayout>
+                    <TextView
+                        android:text="周日"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/font_8"/>
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:id="@+id/checkbox_saturday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:text="周六"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:id="@+id/checkbox_sunday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:text="周日"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="@dimen/font_8"/>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -165,4 +177,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

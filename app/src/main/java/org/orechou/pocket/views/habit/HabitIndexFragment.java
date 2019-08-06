@@ -10,13 +10,17 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.litepal.LitePal;
 import org.orechou.pocket.R;
+import org.orechou.pocket.models.adapters.HabitAdapter;
 import org.orechou.pocket.models.entity.Habit;
+import org.orechou.pocket.models.entity.HabitTag;
 
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,8 +37,13 @@ public class HabitIndexFragment extends Fragment {
 
     private List<Habit> mHabitList;
 
-    public HabitIndexFragment() {
-        // Required empty public constructor
+    private Map<Habit, Map<Integer, HabitTag>> mHabitTagMap;
+
+    private HabitAdapter mAdapter;
+
+    public HabitIndexFragment(List<Habit> habitList, Map<Habit, Map<Integer, HabitTag>> habitTagMap) {
+        mHabitList = habitList;
+        mHabitTagMap = habitTagMap;
     }
 
     @Override
@@ -44,14 +53,11 @@ public class HabitIndexFragment extends Fragment {
         ButterKnife.bind(this, view);
         mActivity = (HabitActivity) getActivity();
 
-        initData();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mAdapter = new HabitAdapter(mHabitList, mHabitTagMap);
+        mRecyclerView.setAdapter(mAdapter);
 
         return view;
-    }
-
-    private void initData() {
-        // 所有的 Habit
-        mHabitList = LitePal.findAll(Habit.class);
     }
 
     private Habit createNewHabit(String name) {
@@ -71,14 +77,13 @@ public class HabitIndexFragment extends Fragment {
                     String input = et.getText().toString();
                     if (!input.equals("")) {
                         Habit newHabit = createNewHabit(input);
+                        newHabit.save();
                         mHabitList.add(newHabit);
+                        mAdapter.notifyDataSetChanged();
                     }
                 })
                 .setNegativeButton("取消", null)
                 .show();
-
     }
-
-
 
 }

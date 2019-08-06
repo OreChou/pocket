@@ -1,5 +1,7 @@
 package org.orechou.pocket.models.entity;
 
+import org.litepal.LitePal;
+import org.litepal.annotation.Column;
 import org.litepal.crud.LitePalSupport;
 
 import java.util.Date;
@@ -35,7 +37,7 @@ public class HabitTag extends LitePalSupport {
     }
 
     public Habit getHabit() {
-        return habit;
+        return this.habit;
     }
 
     public void setHabit(Habit habit) {
