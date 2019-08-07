@@ -54,6 +54,7 @@ public class MainActivity extends BaseActivity {
         Entry entry4 = new Entry("剪贴板", R.drawable.ic_entry_clipboard);
         Entry entry5 = new Entry("二维码生成", R.drawable.ic_entry_code);
         Entry entry6 = new Entry("文字识别", R.drawable.ic_entry_text_recognition);
+        Entry entry7 = new Entry("快捷相机", R.drawable.ic_entry_camera);
 
         mEntryList.add(entry1);
         mEntryList.add(entry2);
@@ -61,6 +62,7 @@ public class MainActivity extends BaseActivity {
         mEntryList.add(entry4);
         mEntryList.add(entry5);
         mEntryList.add(entry6);
+        mEntryList.add(entry7);
     }
 
 }

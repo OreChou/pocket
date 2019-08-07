@@ -14,6 +14,7 @@ public final class DateUtils {
     static SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy年MM月dd日");
     static SimpleDateFormat dateFormatWithoutTime = new SimpleDateFormat("yyyy-MM-dd");
     static SimpleDateFormat dateFormatWithTime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    static SimpleDateFormat timestampSuffix = new SimpleDateFormat("yyyy-MM-dd_hhmmss");
 
     /**
      * 获取当前日期与指定时间的天数差
@@ -105,5 +106,13 @@ public final class DateUtils {
 
     public static String formatDateWithTime(Date date) {
         return dateFormatWithTime.format(date);
+    }
+
+    public static String getTimestampSuffix(Date date) {
+        return timestampSuffix.format(date);
+    }
+
+    public static String getTimestampSuffix() {
+        return timestampSuffix.format(getNow());
     }
 }

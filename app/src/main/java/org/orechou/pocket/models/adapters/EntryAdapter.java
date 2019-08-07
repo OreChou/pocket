@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.orechou.pocket.R;
 import org.orechou.pocket.models.entity.Entry;
+import org.orechou.pocket.views.camera.CameraActivity;
 import org.orechou.pocket.views.deadline.DeadlineActivity;
 import org.orechou.pocket.views.clipboard.ClipboardActivity;
 import org.orechou.pocket.views.code.CodeActivity;
@@ -57,6 +58,9 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryAdapter.ViewHolder> 
                     break;
                 case "二维码生成":
                     CodeActivity.startActivity(mContext);
+                    break;
+                case "快捷相机":
+                    CameraActivity.startActivity(mContext);
                     break;
             }
         });
